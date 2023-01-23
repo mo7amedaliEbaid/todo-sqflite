@@ -33,7 +33,7 @@ migrate_working_dir/
 /build/
 
 # Web related
-simple_app/generated_plugin_registrant.dart
+simple_app_provider/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
