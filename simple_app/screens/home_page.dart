@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_sqflite/custom_widgets/todo_card.dart';
+import '../custom_widgets/todo_card.dart';
 import '../models/todo_model.dart';
 import '../providers/TODOprovider.dart';
 import 'details_page.dart';

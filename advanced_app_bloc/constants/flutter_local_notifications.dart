@@ -1,8 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
-import 'package:timezone/data/latest.dart' as tz;
 
 class NotificationService {
   static final NotificationService _notificationService = NotificationService._internal();
@@ -19,17 +17,11 @@ class NotificationService {
     const AndroidInitializationSettings initializationSettingsAndroid =
     AndroidInitializationSettings('@drawable/ic_flutter_notification');
 
-    const IOSInitializationSettings initializationSettingsIOS =
-    IOSInitializationSettings(
-      requestAlertPermission: false,
-      requestBadgePermission: false,
-      requestSoundPermission: false,
-    );
 
     const InitializationSettings initializationSettings =
     InitializationSettings(
         android: initializationSettingsAndroid,
-        iOS: initializationSettingsIOS
+
     );
 
     await flutterLocalNotificationsPlugin.initialize(initializationSettings);
@@ -49,12 +41,7 @@ class NotificationService {
             ticker: 'ticker',
             icon: '@drawable/ic_flutter_notification'
         ),
-        iOS: IOSNotificationDetails(
-          sound: 'default.wav',
-          presentAlert: true,
-          presentBadge: true,
-          presentSound: true,
-        ),
+
       ),
       uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       androidAllowWhileIdle: true,
@@ -87,12 +74,6 @@ class NotificationService {
                 //sound: ,
                 ticker: 'ticker',
                 icon: '@drawable/ic_flutter_notification'
-            ),
-            iOS: IOSNotificationDetails(
-              sound: 'default.wav',
-              presentAlert: true,
-              presentBadge: true,
-              presentSound: true,
             ),
           ),
           androidAllowWhileIdle: true,

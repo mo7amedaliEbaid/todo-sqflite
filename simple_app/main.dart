@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_sqflite/screens/home_page.dart';
+
+import 'screens/home_page.dart';
 
  main() {
   runApp(MyApp());

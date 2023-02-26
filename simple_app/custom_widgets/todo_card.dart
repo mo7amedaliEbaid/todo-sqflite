@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:todo_sqflite/models/todo_model.dart';
+
+import '../models/todo_model.dart';
 
 final shadeOfColors = [
   Colors.blue.shade900,
