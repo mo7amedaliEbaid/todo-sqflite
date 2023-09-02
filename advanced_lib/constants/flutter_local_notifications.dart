@@ -84,6 +84,7 @@ class NotificationService {
                 "MyTO_DOList@scorpionA", "MyTO_DOListChannel",
                 importance: Importance.max,
                 priority: Priority.max,
+                //sound: ,
                 ticker: 'ticker',
                 icon: '@drawable/ic_flutter_notification'
             ),

@@ -15,12 +15,11 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   NotificationService().initNotification();
   NotificationService().requestIOSPermissions();
-  BlocOverrides.runZoned(
-        () {
+  Bloc.observer = MyBlocObserver();
+
+
       runApp(MyApp());
-    },
-    blocObserver: MyBlocObserver(),
-  );
+
 
 }
 
